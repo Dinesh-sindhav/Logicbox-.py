@@ -1,0 +1,25 @@
+questions = [
+    ["Capital of India?", "B"],
+    ["Red Planet?", "C"],
+    ["Author of Indian anthem?", "A"]
+]
+
+options = [
+    ["A. Mumbai", "B. Delhi", "C. Kolkata", "D. Chennai"],
+    ["A. Earth", "B. Venus", "C. Mars", "D. Jupiter"],
+    ["A. Rabindranath Tagore", "B. Gandhi", "C. Bose", "D. Nehru"]
+]
+
+score = 0
+print("Welcome to the Quiz!\n")
+for i in range(len(questions)):
+    print(questions[i][0])
+    for opt in options[i]:
+        print(opt)
+    ans = input("Your answer (A/B/C/D): ").upper()
+    if ans == questions[i][1]:
+        print("Correct!\n")
+        score += 1
+    else:
+        print(f"Wrong! Correct: {questions[i][1]}\n")
+print(f"Score: {score}/3")
